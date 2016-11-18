@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<?php header( 'Location: /index.html' ) ;  ?>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>RPS</title>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+<div  id="rps-app">
+  <div class="container">
+    <div class="row">
+      <h1 class="page-header col-md-12">Rock vs. Paper vs. Scissors</h1>
+    </div>
+  <div class="row">
+    <h4 class="col-md-12">To play just press either "R" or "S" or "P" on your keyboard.</h4>
+  </div>
+    <div class="row">
+      <div class="text-center col-md-3"><h3>Total Games Played:&nbsp; <span id="totalGames"></span></h3></div>
+      <div class="text-center col-md-3"><h3>User Score:&nbsp;<span id="userScore"></span></h3></div>
+      <div class="text-center col-md-3"><h3>Computer Score:&nbsp;<span id="computerScore"></span></h3></div>
+      <div class="text-center col-md-3"><h3>Ties:&nbsp; <span id="ties"></span></h3></div>
+    </div>
+  </div>
+</div>
+<script src="https://use.fontawesome.com/dce08cf54a.js"></script>
+<script>
+var userScore = 0;
+var computerScore = 0;
+var ties = 0;
+var totalGameCounter = 0;
+
+var gameVars = ['r', 's', 'p'];
+
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+  // https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
+
+    // 82 === "R"
+    // 80 === "P"
+    // 83 === "S"
+
+    var computerSelection = gameVars[Math.floor(Math.random() * gameVars.length)];
+
+    e = e || window.event;
+
+    if (e.keyCode == '82') {
+      if (computerSelection === "p") {
+        // console.log("You Win");
+        userScore += 1;
+        document.getElementById("userScore").innerHTML = userScore;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      } else if (computerSelection === 'r') {
+        // console.log("It's a Tie");
+        ties += 1;
+        document.getElementById("ties").innerHTML = ties;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      } else {
+        // console.log("You Lose");
+        computerScore += 1;
+        document.getElementById("computerScore").innerHTML = computerScore;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      }
+    } else if (e.keyCode == '80') {
+      if (computerSelection === "r") {
+        // console.log("You Win");
+        userScore += 1;
+        document.getElementById("userScore").innerHTML = userScore;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      } else if (computerSelection === 'p') {
+        // console.log("It's a Tie");
+        ties += 1;
+        document.getElementById("ties").innerHTML = ties;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      } else {
+        // console.log("You Lose");
+        computerScore += 1;
+        document.getElementById("computerScore").innerHTML = computerScore;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      }
+    } else if (e.keyCode == '83') {
+      if (computerSelection === "p") {
+        // console.log("You Win");
+        userScore += 1;
+        document.getElementById("userScore").innerHTML = userScore;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      } else if (computerSelection === 's') {
+        // console.log("It's a Tie");
+        ties += 1;
+        document.getElementById("ties").innerHTML = ties;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      } else {
+        // console.log("You Lose");
+        computerScore += 1;
+        document.getElementById("computerScore").innerHTML = computerScore;
+
+        totalGameCounter += 1;
+        document.getElementById("totalGames").innerHTML = totalGameCounter;
+      }
+    }
+
+}
+
+// if ((e.keyCode == '82' && computerSelection === 's') || (e.keycode == '80' && computerSelection === 'r') || (e.keyCode == '83' && computerSelection === 'p')) {
+//     console.log("you win");
+// }
+// else if ((e.keyCode == '83' && computerSelection === 's') || (e.keycode == '82' && computerSelection === 'r') || (e.keyCode == '80' && computerSelection === 'p')) {
+//     console.log("it's a tie");
+// }
+// else{
+//    console.log("you lose");
+// }
+
+
+  </script>
+  </body>
+</html>
