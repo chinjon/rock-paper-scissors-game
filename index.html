@@ -42,6 +42,9 @@
       <div class="text-center col-md-3"><h3><i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true"></i>&nbsp;Computer Score:&nbsp;<span id="computerScore"></span></h3></div>
       <div class="text-center col-md-3"><h3><i class="fa fa-handshake-o fa-1x" aria-hidden="true"></i>&nbsp;Ties:&nbsp; <span id="ties"></span></h3></div>
     </div>
+    <div class="row">
+      <h1 class="col-md-12 text-center" id="resultMessage"></h1>
+    </div>
   </div>
 </div>
 <script src="https://use.fontawesome.com/dce08cf54a.js"></script>
@@ -72,21 +75,21 @@ function checkKey(e) {
         // console.log("You Win");
         userScore += 1;
         document.getElementById("userScore").innerHTML = userScore;
-
+        document.getElementById('resultMessage').innerHTML = "You Win!"
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       } else if (computerSelection === 'r') {
         // console.log("It's a Tie");
         ties += 1;
         document.getElementById("ties").innerHTML = ties;
-
+        document.getElementById('resultMessage').innerHTML = "It's A Tie!"
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       } else {
         // console.log("You Lose");
         computerScore += 1;
         document.getElementById("computerScore").innerHTML = computerScore;
-
+        document.getElementById('resultMessage').innerHTML = "Sorry You Lost."
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       }
@@ -95,21 +98,21 @@ function checkKey(e) {
         // console.log("You Win");
         userScore += 1;
         document.getElementById("userScore").innerHTML = userScore;
-
+        document.getElementById('resultMessage').innerHTML = "You Win!"
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       } else if (computerSelection === 'p') {
         // console.log("It's a Tie");
         ties += 1;
         document.getElementById("ties").innerHTML = ties;
-
+        document.getElementById('resultMessage').innerHTML = "It's A Tie!"
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       } else {
         // console.log("You Lose");
         computerScore += 1;
         document.getElementById("computerScore").innerHTML = computerScore;
-
+        document.getElementById('resultMessage').innerHTML = "Sorry You Lost."
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       }
@@ -118,21 +121,21 @@ function checkKey(e) {
         // console.log("You Win");
         userScore += 1;
         document.getElementById("userScore").innerHTML = userScore;
-
+        document.getElementById('resultMessage').innerHTML = "You Win!"
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       } else if (computerSelection === 's') {
         // console.log("It's a Tie");
         ties += 1;
         document.getElementById("ties").innerHTML = ties;
-
+        document.getElementById('resultMessage').innerHTML = "It's A Tie!"
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       } else {
         // console.log("You Lose");
         computerScore += 1;
         document.getElementById("computerScore").innerHTML = computerScore;
-
+        document.getElementById('resultMessage').innerHTML = "Sorry You Lost."
         totalGameCounter += 1;
         document.getElementById("totalGames").innerHTML = totalGameCounter;
       }
