@@ -3,4 +3,4 @@
 
 A rock paper scissors-styled game for Rutgers Coding Bootcamp.
 
-[LIVE LINK](https://chinjon.github.io/rps)
+[LIVE LINK TO PLAY GAME](https://chinjon.github.io/rock-paper-scissors-game/)
